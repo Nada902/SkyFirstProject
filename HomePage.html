@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+<title>Home page</title>
+<meta name="viewport"
+          content="width=device-width, 
+                   initial-scale=1.0">
+<link href="StyleSheet.css" rel="stylesheet" />
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+       
+
+</head>
+
+
+
+<body>
+
+
+<my-header></my-header>
+
+<main  >
+
+<!--welcon msg + new req. btn-->
+
+
+    <div class="container welcome-container" >
+        <div class="d-flex flex-column flex-sm-row align-items-center">
+            <h1 class="welcome-message me-3 text-center text-sm-start">Welcome Back Hazem! Here are your latest updates.</h1>
+            <a href="#" class="btn btn-success btn-sm welcome-button">New Request</a>
+        </div>
+    </div>
+<!--end welcon msg + new req. btn-->
+<!--details-->
+
+
+<div class="container" >
+    <div class="row">
+        <div class="col-md-8 profile-card">
+            <a href="Profiles.html" class="btn btn-outline-success btn-view-profile">View Profile</a>
+            <div class="d-flex align-items-center">
+                <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                <div class="ml-3">
+                    <h5 style="margin: 0;" id="userName">Ahmad Azmi</h5>
+                    <h6 style="color: black; margin: 0;">Marketing Department</h6>
+                    <p style="margin: 0;" id="profileTitle">Junior Accounting Officer</p>
+                </div>
+            </div>
+            <div class="info-row">
+                <div class="info-item">
+                    <i class="fas fa-user-tie"></i> 
+                    <span><strong>Reporting To:</strong> <p><span id="reportingTo">Salwa Assem</span></p></span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-briefcase"></i>
+                    <span><strong>Corporate Level:</strong><p><span id="corporateLevel">Level 10</span></p></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 d-flex align-items-center">
+            <div class="request-card flex-fill">
+                <i class="fas fa-plane"></i><br>
+                <span id="vacationRequestsCard">10</span><br>
+                Vacation Requests
+            </div>
+            <div class="request-card flex-fill">
+                <i class="fas fa-file-alt"></i><br>
+                <span id="leaveRequestsCard">10</span><br>
+                Leave Requests
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!--end details -->
+<br>
+<!--slider-->
+
+<div class="container mt-5">
+    <h1 class="welcome-message text-sm-start " >Latest News: </h1>
+
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/pexels-nubikini-386009.jpg" class="d-block" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Best Spots For A Summer Vacation</h5>
+                    <p>Check out these spots where we provide you with a discount code! Type VACATION when inserting the promo code and behold the surprise!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="assets/pexels-pixabay-413960.jpg" class="d-block" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Explore the Great Outdoors</h5>
+                    <p>Discover amazing places to explore and enjoy nature.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="assets/pexels-te-lensfix-380994-1371360.jpg" class="d-block" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Experience Adventure Like Never Before</h5>
+                    <p>Join us for exciting adventures and create unforgettable memories.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-indicators">
+            <button type="button"  data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+    </div>
+</div>
+
+<!--end slider-->
+ 
+<!--vacation requests-->
+
+<div class="container mt-5 profile-card">
+    <div class="row mb-4">
+        <div class="row ">
+          <div class="col-md-4">
+            <h2 class="welcome-message me-3 text-sm-start " >
+                <i class="fas fa-suitcase icon-success"></i>Vacation Requests</h2>
+</div> 
+          <div class="col-md-8">
+            <form class="form-inline my-2 my-lg-0 d-flex flex-row-reverse" onsubmit="event.preventDefault(); searchRequests();">
+                <input class="form-control mr-sm-2" type="search" id="searchInput" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="request-card1">
+                <img src="assets/icons8-user-96.png" class="rounded-circle" alt="Profile Picture">
+                <div class="card-header">moe Attar</div>
+                <div class="align-content">
+                <p><span class="fst-normal">Submitted on:</span><br> 1/3/2024</p>
+                <p><span>Duration:</span><br> 2 Weeks (1/4/2023 - 14/4/2023)</p>
+                <p><span>Salary:</span><br> 1000 AED</p>
+            </div>
+                <button class="btn btn-outline-success">Decline</button>
+                <button class="btn btn-success">Approve</button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="request-card1">
+                <img src="assets/icons8-user-96.png" class="rounded-circle" alt="Profile Picture">
+                <div class="card-header">nour Attar</div>
+                <div class="align-content">
+                <p><span>Submitted on:</span><br> 1/3/2024</p>
+                <p><span>Duration:</span><br> 2 Weeks (1/4/2023 - 14/4/2023)</p>
+                <p><span>Salary:</span><br> 2500 AED</p></div>
+                <button class="btn btn-outline-success">Decline</button>
+                <button class="btn btn-success">Approve</button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="request-card1">
+               <img src="assets/icons8-user-96.png" class="rounded-circle " alt="Profile Picture">
+                <div  class="card-header">nada Attar</div>
+               <div class="align-content">
+                 <p ><span>Submitted on:</span><br> 1/3/2024</p>
+                <p><span>Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                <p><span>Salary:</span><br> 1000 AED</p></div>
+                
+                <button class="btn btn-outline-success">Decline</button>
+                <button class="btn btn-success">Approve</button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="request-card1">
+                <img src="assets/icons8-user-96.png" class="rounded-circle" alt="Profile Picture">
+                <div class="card-header">Ahmad Attar</div>
+                <div class="align-content">
+                <p><span>Submitted on:</span><br> 1/3/2024</p>
+                <p><span>Duration:</span> <br>2 Weeks (1/4/2023 - 14/4/2023)</p>
+                <p><span>Salary:</span><br> 1000 AED</p></div>
+                
+                <button class="btn btn-outline-success">Decline</button>
+                <button class="btn btn-success">Approve</button>
+            </div>
+        </div>
+    </div>
+    <div class="text-right mt-4">
+        <a href="vacation-requests.html" class="btn btn-link">View More &gt;</a>
+    </div>
+</div>
+
+
+
+
+    <!--end vacation requests-->
+
+
+
+
+</main>
+
+
+<my-footer></my-footer>
+<script type="module" src="shared.js"></script>
+<script  src="main.js"></script>
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
