@@ -2,16 +2,201 @@
 <html>
     <head>
         <meta charset="utf-8" />
-    <title>Profiles    </title>
+    <title>Profiles  </title>
     <meta name="viewport"
           content="width=device-width, 
                    initial-scale=1.0">
-    
+                   <link href="StyleSheet.css" rel="stylesheet" />
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
-    </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">    </head>
     <body>
         <my-header></my-header>
+
+        <main>
+ <br>
+
+  <!--details-->
+<div class="container" >
+    <div class="row">
+        
+        <div class=" profile-card" style="max-width: 1500px; margin-left: auto;margin-right: auto;">
+            <a href="Profiles.html" class="btn btn-view-profile" style="background-color:#5cb85c; color: #fff;">New Request</a>
+
+            <div class="d-flex align-items-center">
+                <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                <div class="ml-3">
+                    <h5 style="margin: 0;" id="userName">Ahmad Azmi</h5>
+                    <h6 style="color: black; margin: 0;">Marketing Department</h6>
+                    <p style="margin: 0;" id="profileTitle">Junior Accounting Officer</p>
+                </div>
+            </div>
+            <div class="info-row1">
+                <div class="info-item1">
+                    <i class="fas fa-user-tie"></i> 
+                    <span><strong>Reporting To:</strong> <span id="reportingTo"><br>Salwa Assem</span></span>
+                </div>
+                <div class="info-item1">
+                    <i class="fas fa-briefcase"></i>
+                    <span><strong>Corporate Level:</strong> <span id="corporateLevel"><br>Level 10</span></span>
+                </div>
+                <div class="info-item1">
+                    <i class="fas fa-hourglass-half"></i>
+                    <span><strong>Lifetime:</strong> <span id="lifetime"><br>2.5 Years</span></span>
+                </div>
+                <div class="info-item1">
+                    <i class="fas fa-plane"></i>
+                    <span><strong>Vacation Days Left:</strong> <span id="vacationDays"><br>10 Days</span></span>
+                </div>
+                <div class="info-item1">
+                    <i class="fas fa-pills"></i>
+                    <span><strong>Sick Days Left:</strong> <span id="sickDays"><br>14 Days</span></span>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+<!--end details --> 
+
+<!--History-->
+
+<div class="container" >
+    <div class="history-card">
+        <h2 class="welcome-message">
+            <i class="fas fa-suitcase icon-success"></i> History
+        </h2>
+        <div class="row">
+            <div class="col-md-6 col-lg-3">
+                <div class="vacation-card">
+                    <div class="vacation-header">Annual Vacation</div>
+                    <div class="info">2/3/2023 - 10/3/2023<br>8 days<br>Approved by: Hazem Azmi</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="vacation-card">
+                    <div class="vacation-header">Sick Vacation</div>
+                    <div class="info">2/3/2023 - 10/3/2023<br>8 days<br>Approved by: Hazem Azmi</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="vacation-card">
+                    <div class="vacation-header">Non Paid Vacation</div>
+                    <div class="info">2/3/2023 - 10/3/2023<br>8 days<br>Approved by: Hazem Azmi</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="vacation-card">
+                    <div class="vacation-header">Annual Vacation</div>
+                    <div class="info">2/3/2023 - 10/3/2023<br>8 days<br>Approved by: Hazem Azmi</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="vacation-card">
+                    <div class="vacation-header">Non Paid Vacation</div>
+                    <div class="info">2/3/2023 - 10/3/2023<br>8 days<br>Approved by: Hazem Azmi</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="vacation-card">
+                    <div class="vacation-header">Sick Vacation</div>
+                    <div class="info">2/3/2023 - 10/3/2023<br>8 days<br>Approved by: Hazem Azmi</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="vacation-card">
+                    <div class="vacation-header">Annual Vacation</div>
+                    <div class="info">2/3/2023 - 10/3/2023<br>8 days<br>Approved by: Hazem Azmi</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="vacation-card">
+                    <div class="vacation-header">Sick Vacation</div>
+                    <div class="info">2/3/2023 - 10/3/2023<br>8 days<br>Approved by: Hazem Azmi</div>
+                </div>
+            </div>
+        </div>
+        <div class="text-right">
+            <a href="vacation-requests.html" class="btn btn-link  " style="color: #5cb85c;">View More &gt;</a>
+        </div>
+    </div>
+</div>
+
+<!--end History-->
+
+<!--pending requests-->
+
+<div class="container" >
+    <div class="history-card">
+        <h2 class="welcome-message">
+            <i class="fas fa-suitcase icon-success"></i> Pending Requests
+        </h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="request-card1">
+                    <img src="assets/icons8-user-96.png" class="rounded-circle" alt="Profile Picture">
+                    <div class="card-header">moe Attar</div>
+                    <div class="align-content">
+                    <p><span  class=" info">Submitted on:</span><br> 1/3/2024</p>
+                    <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023 - 14/4/2023)</p>
+                    <p><span >Currently at:</span><br><span style="color: #5cb85c; font-weight: bold;"> Omar Ahmad</span></p>
+                    
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="request-card1">
+                    <img src="assets/icons8-user-96.png" class="rounded-circle" alt="Profile Picture">
+                    <div class="card-header">nour Attar</div>
+                    <div class="align-content">
+                    <p><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                    <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023 - 14/4/2023)</p>
+                    <p>Currently at:<br><span style="color: #5cb85c; font-weight: bold;"> Omar Ahmad</span></p></div>
+                    
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="request-card1">
+                   <img src="assets/icons8-user-96.png" class="rounded-circle " alt="Profile Picture">
+                    <div  class="card-header">nada Attar</div>
+                   <div class="align-content">
+                     <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                    <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                    <p>Currently at:<br><span style="color: #5cb85c; font-weight: bold;"> Omar Ahmad</span></p></div>
+                    
+                    
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="request-card1">
+                    <img src="assets/icons8-user-96.png" class="rounded-circle" alt="Profile Picture">
+                    <div class="card-header">Ahmad Attar</div>
+                    <div class="align-content">
+                    <p><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                    <p><span class="info">Duration:</span> <br>2 Weeks (1/4/2023 - 14/4/2023)</p>
+                    <p>Currently at:<br><span style="color: #5cb85c; font-weight: bold;"> Omar Ahmad</span></p></div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="text-right">
+            <a href="vacation-requests.html" class="btn btn-link  " style="color: #5cb85c;">View More &gt;</a>
+        </div>
+    </div>
+</div>
+
+
+
+<!--end pending requests-->
+
+
+   
+        </main>
         <my-footer></my-footer>
         <script type="module" src="shared.js"></script>
 

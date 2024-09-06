@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Vacation Requests</title>
+    <meta name="viewport"
+              content="width=device-width, 
+                       initial-scale=1.0">
+    <link href="StyleSheet.css" rel="stylesheet" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <my-header></my-header>
+
+<main>
+
+    <div class="container mt-5 profile-card">
+        <div class="row mb-4">
+            <div class="row ">
+              <div class="col-md-4">
+                <h2 class="welcome-message me-3 text-sm-start " >
+                    <i class="fas fa-suitcase icon-success"></i>Vacation Requests</h2>
+            </div> 
+              <div class="col-md-8">
+                 <form class="form-inline my-2 my-lg-0 d-flex flex-row-reverse" onsubmit="event.preventDefault(); 
+                 searchRequest();">
+                <input class="form-control mr-sm-2" type="search" id="searchInpt" 
+                placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+    
+    
+            </div>
+        </div>
+
+       
+
+    <div class=" row d-none" id="page1">
+        <!--selector page1-->
+        <div class="row mb-3">
+            <div class="col-md-12">
+                <input type="checkbox" id="selectAllPage1" onclick="toggleSelectAll('page1', this)">
+                <label for="selectAllPage1">Select All on Page 1</label>
+            </div>
+        </div>
+         <!--111-->
+         <div class="row" >
+            
+            <div class="col-md-4">
+                <div class="request-card1 vacation-card "  >
+                    <div class="d-flex align-items-center">
+                    <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                    <div class="align-content">
+                    <h5 class="empName" style="margin: 0;" >Moe Attar</h5></div>
+                </div>
+                <div class="d-flex">
+                   <div class=" align-content  flex-grow-1">
+                    <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                    <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                    <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+                
+                    <div class="container align-self-end flex-shrink-1 ">
+                        <!-- Button container -->
+                        <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                          <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                          <button type="button" class="btn " 
+                          style="background-color: #5cb85c;color:#fff ;">Approve</button>
+                        </div>
+                      </div>
+                      <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page1')">
+
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="request-card1 vacation-card "  >
+                    <div class="d-flex align-items-center">
+                    <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                    <div class="align-content">
+                    <h5 class="empName" style="margin: 0;" >Moe Attar</h5></div>
+                </div>
+                <div class="d-flex">
+                   <div class=" align-content  flex-grow-1">
+                    <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                    <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                    <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+                
+                    <div class="container align-self-end flex-shrink-1 ">
+                        <!-- Button container -->
+                        <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                          <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                          <button type="button" class="btn " 
+                          style="background-color: #5cb85c;color:#fff ;">Approve</button>
+                        </div>
+                      </div>
+                      <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page1')">
+
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="request-card1 vacation-card "  >
+                    <div class="d-flex align-items-center">
+                    <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                    <div class="align-content">
+                    <h5 class="empName" style="margin: 0;" >Moe Attar</h5></div>
+                </div>
+                <div class="d-flex">
+                   <div class=" align-content  flex-grow-1">
+                    <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                    <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                    <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+                
+                    <div class="container align-self-end flex-shrink-1 ">
+                        <!-- Button container -->
+                        <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                          <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                          <button type="button" class="btn " 
+                          style="background-color: #5cb85c;color:#fff ;">Approve</button>
+                        </div>
+                      </div>
+                      <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page1')">
+
+                    </div>
+                   
+                </div>
+            </div>
+            
+            
+            
+        </div>
+        <!--222-->
+        <div class="row">
+            
+            <div class="col-md-4">
+                <div class="request-card1 vacation-card" >
+                    <div class="d-flex align-items-center">
+                    <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                    <div class="align-content">
+                    <h5 style="margin: 0;" class="empName">Nada Attar</h5></div>
+                </div>
+                <div class="d-flex">
+                   <div class=" align-content  flex-grow-1">
+                    <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                    <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                    <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+                
+                    <div class="container align-self-end flex-shrink-1 ">
+                        <!-- Button container -->
+                        <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                          <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                          <button type="button" class="btn "style="background-color: #5cb85c;color:#fff ;" >Approve</button>
+                        </div>
+                      </div>
+                      <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page1')">
+
+                    
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="request-card1 vacation-card" >
+                    <div class="d-flex align-items-center">
+                    <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                    <div class="align-content">
+                    <h5 style="margin: 0;" class="empName">Nada Attar</h5></div>
+                </div>
+                <div class="d-flex">
+                   <div class=" align-content  flex-grow-1">
+                    <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                    <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                    <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+                
+                    <div class="container align-self-end flex-shrink-1 ">
+                        <!-- Button container -->
+                        <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                          <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                          <button type="button" class="btn "style="background-color: #5cb85c;color:#fff ;" >Approve</button>
+                        </div>
+                      </div>
+                      <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page1')">
+
+                    
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="request-card1 vacation-card" >
+                    <div class="d-flex align-items-center">
+                    <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                    <div class="align-content">
+                    <h5 style="margin: 0;" class="empName">Nada Attar</h5></div>
+                </div>
+                <div class="d-flex">
+                   <div class=" align-content  flex-grow-1">
+                    <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                    <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                    <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+                
+                    <div class="container align-self-end flex-shrink-1 ">
+                        <!-- Button container -->
+                        <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                          <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                          <button type="button" class="btn "style="background-color: #5cb85c;color:#fff ;" >Approve</button>
+                        </div>
+                      </div>
+                      <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page1')">
+
+                    
+                    </div>
+                   
+                </div>
+            </div>
+           
+            
+        </div>
+        <!--333-->
+        <div class="row">
+            
+            <div class="col-md-4">
+                <div class="request-card1 vacation-card" >
+                    <div class="d-flex align-items-center">
+                    <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                    <div class="align-content">
+                    <h5 style="margin: 0;" class="empName">Nour Attar</h5></div>
+                </div>
+                <div class="d-flex">
+                   <div class=" align-content  flex-grow-1">
+                    <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                    <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                    <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+                
+                    <div class="container align-self-end flex-shrink-1 ">
+                        <!-- Button container -->
+                        <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                          <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                          <button type="button" class="btn " style="background-color: #5cb85c;color:#fff ;">Approve</button>
+                        </div>
+                      </div>
+                    
+                      <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page1')">
+                    </div>
+                   
+                </div>
+            </div> 
+            <div class="col-md-4">
+                <div class="request-card1 vacation-card" >
+                    <div class="d-flex align-items-center">
+                    <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                    <div class="align-content">
+                    <h5 style="margin: 0;" class="empName">Nour Attar</h5></div>
+                </div>
+                <div class="d-flex">
+                   <div class=" align-content  flex-grow-1">
+                    <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                    <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                    <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+                
+                    <div class="container align-self-end flex-shrink-1 ">
+                        <!-- Button container -->
+                        <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                          <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                          <button type="button" class="btn " style="background-color: #5cb85c;color:#fff ;">Approve</button>
+                        </div>
+                      </div>
+                    
+                      <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page1')">
+                    </div>
+                   
+                </div>
+            </div> 
+            <div class="col-md-4">
+                <div class="request-card1 vacation-card" >
+                    <div class="d-flex align-items-center">
+                    <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                    <div class="align-content">
+                    <h5 style="margin: 0;" class="empName">Nour Attar</h5></div>
+                </div>
+                <div class="d-flex">
+                   <div class=" align-content  flex-grow-1">
+                    <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                    <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                    <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+                
+                    <div class="container align-self-end flex-shrink-1 ">
+                        <!-- Button container -->
+                        <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                          <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                          <button type="button" class="btn " style="background-color: #5cb85c;color:#fff ;">Approve</button>
+                        </div>
+                      </div>
+                    
+                      <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page1')">
+                    </div>
+                   
+                </div>
+            </div> 
+           
+            
+            
+            
+        </div>
+        <!--444-->
+        <div class="row">
+            
+            <div class="col-md-4">
+                <div class="request-card1 vacation-card" >
+                    <div class="d-flex align-items-center">
+                    <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                    <div class="align-content">
+                    <h5 style="margin: 0;" class="empName">Ahmad Attar</h5></div>
+                </div>
+                <div class="d-flex">
+                   <div class=" align-content  flex-grow-1">
+                    <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                    <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                    <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+                
+                    <div class="container align-self-end flex-shrink-1 ">
+                        <!-- Button container -->
+                        <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                          <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                          <button type="button" class="btn "style="background-color: #5cb85c;color:#fff ;">Approve</button>
+                        </div>
+                      </div>
+                      <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page1')">
+
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="request-card1 vacation-card" >
+                    <div class="d-flex align-items-center">
+                    <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                    <div class="align-content">
+                    <h5 style="margin: 0;" class="empName">Ahmad Attar</h5></div>
+                </div>
+                <div class="d-flex">
+                   <div class=" align-content  flex-grow-1">
+                    <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                    <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                    <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+                
+                    <div class="container align-self-end flex-shrink-1 ">
+                        <!-- Button container -->
+                        <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                          <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                          <button type="button" class="btn "style="background-color: #5cb85c;color:#fff ;">Approve</button>
+                        </div>
+                      </div>
+                      <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page1')">
+
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="request-card1 vacation-card" >
+                    <div class="d-flex align-items-center">
+                    <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                    <div class="align-content">
+                    <h5 style="margin: 0;" class="empName">Ahmad Attar</h5></div>
+                </div>
+                <div class="d-flex">
+                   <div class=" align-content  flex-grow-1">
+                    <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                    <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                    <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+                
+                    <div class="container align-self-end flex-shrink-1 ">
+                        <!-- Button container -->
+                        <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                          <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                          <button type="button" class="btn "style="background-color: #5cb85c;color:#fff ;">Approve</button>
+                        </div>
+                      </div>
+                      <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page1')">
+
+                    </div>
+                   
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+  
+
+    <div class="row d-none " id="page2">
+          <!--selector page2-->
+    <div class="row mb-3">
+        <div class="col-md-12">
+            <input type="checkbox" id="selectAllPage2" onclick="toggleSelectAll('page2', this)">
+            <label for="selectAllPage2">Select All on Page 2</label>
+        </div>
+    </div>
+       <!--111-->
+       <div class="row" >
+            
+        <div class="col-md-4">
+            <div class="request-card1 vacation-card "  >
+                <div class="d-flex align-items-center">
+                <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                <div class="align-content">
+                <h5 class="empName" style="margin: 0;" >Moe Azmi</h5></div>
+            </div>
+            <div class="d-flex">
+               <div class=" align-content  flex-grow-1">
+                <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+            
+                <div class="container align-self-end flex-shrink-1 ">
+                    <!-- Button container -->
+                    <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                      <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                      <button type="button" class="btn " style="background-color: #5cb85c;color:#fff ;">Approve</button>
+                    </div>
+                  </div>
+                
+                  <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page2')">
+
+                </div>
+               
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="request-card1 vacation-card " >
+                <div class="d-flex align-items-center">
+                <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                <div class="align-content">
+                <h5 style="margin: 0;" class="empName">Moe Azmi</h5></div>
+            </div>
+            <div class="d-flex">
+               <div class=" align-content  flex-grow-1">
+                <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+            
+                <div class="container align-self-end flex-shrink-1 ">
+                    <!-- Button container -->
+                    <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                      <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                      <button type="button" class="btn " style="background-color: #5cb85c;color:#fff ;">Approve</button>
+                    </div>
+                  </div>
+                  <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page2')">
+
+                </div>
+               
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="request-card1 vacation-card" >
+                <div class="d-flex align-items-center">
+                <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                <div class="align-content">
+                <h5 style="margin: 0;" class="empName">Moe Azmi</h5></div>
+            </div>
+            <div class="d-flex">
+               <div class=" align-content  flex-grow-1">
+                <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+            
+                <div class="container align-self-end flex-shrink-1 ">
+                    <!-- Button container -->
+                    <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                      <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                      <button type="button" class="btn " style="background-color: #5cb85c;color:#fff ;">Approve</button>
+                    </div>
+                  </div>
+                  <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page2')">
+
+                </div>
+               
+            </div>
+        </div>
+        
+        
+        
+    </div>
+    <!--222-->
+    <div class="row">
+        
+        <div class="col-md-4">
+            <div class="request-card1 vacation-card" >
+                <div class="d-flex align-items-center">
+                <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                <div class="align-content">
+                <h5 style="margin: 0;" class="empName">Nada Azmi</h5></div>
+            </div>
+            <div class="d-flex">
+               <div class=" align-content  flex-grow-1">
+                <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+            
+                <div class="container align-self-end flex-shrink-1 ">
+                    <!-- Button container -->
+                    <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                      <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                      <button type="button" class="btn "style="background-color: #5cb85c;color:#fff ;" >Approve</button>
+                    </div>
+                  </div>
+                  <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page2')">
+
+                </div>
+               
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="request-card1 vacation-card" >
+                <div class="d-flex align-items-center">
+                <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                <div class="align-content">
+                <h5 style="margin: 0;" class="empName">Nada Azmi</h5></div>
+            </div>
+            <div class="d-flex">
+               <div class=" align-content  flex-grow-1">
+                <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+            
+                <div class="container align-self-end flex-shrink-1 ">
+                    <!-- Button container -->
+                    <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                      <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                      <button type="button" class="btn "style="background-color: #5cb85c;color:#fff ;" >Approve</button>
+                    </div>
+                  </div>
+                  <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page2')">
+
+                </div>
+               
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="request-card1 vacation-card" >
+                <div class="d-flex align-items-center">
+                <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                <div class="align-content">
+                <h5 style="margin: 0;" class="empName">Nada Azmi</h5></div>
+            </div>
+            <div class="d-flex">
+               <div class=" align-content  flex-grow-1">
+                <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+            
+                <div class="container align-self-end flex-shrink-1 ">
+                    <!-- Button container -->
+                    <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                      <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                      <button type="button" class="btn "style="background-color: #5cb85c;color:#fff ;" >Approve</button>
+                    </div>
+                  </div>
+                  <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page2')">
+
+                </div>
+               
+            </div>
+        </div>
+       
+       
+        
+    </div>
+    <!--333-->
+    <div class="row">
+        
+        <div class="col-md-4">
+            <div class="request-card1 vacation-card" >
+                <div class="d-flex align-items-center">
+                <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                <div class="align-content">
+                <h5 style="margin: 0;" class="empName">Nour Azmi</h5></div>
+            </div>
+            <div class="d-flex">
+               <div class=" align-content  flex-grow-1">
+                <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+            
+                <div class="container align-self-end flex-shrink-1 ">
+                    <!-- Button container -->
+                    <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                      <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                      <button type="button" class="btn " style="background-color: #5cb85c;color:#fff ;">Approve</button>
+                    </div>
+                  </div>
+                  <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page2')">
+
+                </div>
+               
+            </div>
+        </div> 
+        <div class="col-md-4">
+            <div class="request-card1 vacation-card" >
+                <div class="d-flex align-items-center">
+                <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                <div class="align-content">
+                <h5 style="margin: 0;" class="empName">Nour Azmi</h5></div>
+            </div>
+            <div class="d-flex">
+               <div class=" align-content  flex-grow-1">
+                <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+            
+                <div class="container align-self-end flex-shrink-1 ">
+                    <!-- Button container -->
+                    <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                      <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                      <button type="button" class="btn " style="background-color: #5cb85c;color:#fff ;">Approve</button>
+                    </div>
+                  </div>
+                  <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page2')">
+
+                </div>
+               
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="request-card1 vacation-card" >
+                <div class="d-flex align-items-center">
+                <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                <div class="align-content">
+                <h5 style="margin: 0;" class="empName">Nour Azmi</h5></div>
+            </div>
+            <div class="d-flex">
+               <div class=" align-content  flex-grow-1">
+                <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+            
+                <div class="container align-self-end flex-shrink-1 ">
+                    <!-- Button container -->
+                    <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                      <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                      <button type="button" class="btn " style="background-color: #5cb85c;color:#fff ;">Approve</button>
+                    </div>
+                  </div>
+                  <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page2')">
+
+                </div>
+               
+            </div>
+        </div>  
+        
+        
+        
+        
+    </div>
+    <!--444-->
+    <div class="row">
+        
+        <div class="col-md-4">
+            <div class="request-card1 vacation-card" >
+                <div class="d-flex align-items-center">
+                <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                <div class="align-content">
+                <h5 style="margin: 0;" class="empName">Ahmad Azmi</h5></div>
+            </div>
+            <div class="d-flex">
+               <div class=" align-content  flex-grow-1">
+                <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+            
+                <div class="container align-self-end flex-shrink-1 ">
+                    <!-- Button container -->
+                    <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                      <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                      <button type="button" class="btn "style="background-color: #5cb85c;color:#fff ;">Approve</button>
+                    </div>
+                  </div>
+                
+                  <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page2')">
+
+                </div>
+               
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="request-card1 vacation-card" >
+                <div class="d-flex align-items-center">
+                <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                <div class="align-content">
+                <h5 style="margin: 0;" class="empName">Ahmad Azmi</h5></div>
+            </div>
+            <div class="d-flex">
+               <div class=" align-content  flex-grow-1">
+                <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+            
+                <div class="container align-self-end flex-shrink-1 ">
+                    <!-- Button container -->
+                    <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                      <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                      <button type="button" class="btn "style="background-color: #5cb85c;color:#fff ;">Approve</button>
+                    </div>
+                  </div>
+                
+                  <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page2')">
+
+                </div>
+               
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="request-card1 vacation-card" >
+                <div class="d-flex align-items-center">
+                <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                <div class="align-content">
+                <h5 style="margin: 0;" class="empName">Ahmad Azmi</h5></div>
+            </div>
+            <div class="d-flex">
+               <div class=" align-content  flex-grow-1">
+                <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+            
+                <div class="container align-self-end flex-shrink-1 ">
+                    <!-- Button container -->
+                    <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                      <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                      <button type="button" class="btn "style="background-color: #5cb85c;color:#fff ;">Approve</button>
+                    </div>
+                  </div>
+                
+                  <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page2')">
+
+                </div>
+               
+            </div>
+        </div>
+    </div>
+        </div>
+
+        <div class=" row d-none" id="page3">
+            <!--selector page3-->
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <input type="checkbox" id="selectAllPage3" onclick="toggleSelectAll('page3', this)">
+                    <label for="selectAllPage1">Select All on Page 3</label>
+                </div>
+            </div>
+             <!--111-->
+             <div class="row" >
+                
+                <div class="col-md-4">
+                    <div class="request-card1 vacation-card "  >
+                        <div class="d-flex align-items-center">
+                        <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                        <div class="align-content">
+                        <h5 class="empName" style="margin: 0;" >Moe Attar</h5></div>
+                    </div>
+                    <div class="d-flex">
+                       <div class=" align-content  flex-grow-1">
+                        <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                        <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                        <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+                    
+                        <div class="container align-self-end flex-shrink-1 ">
+                            <!-- Button container -->
+                            <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                              <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                              <button type="button" class="btn " 
+                              style="background-color: #5cb85c;color:#fff ;">Approve</button>
+                            </div>
+                          </div>
+                          <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page3')">
+    
+                        </div>
+                       
+                    </div>
+                </div><div class="col-md-4">
+                    <div class="request-card1 vacation-card "  >
+                        <div class="d-flex align-items-center">
+                        <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                        <div class="align-content">
+                        <h5 class="empName" style="margin: 0;" >Moe Attar</h5></div>
+                    </div>
+                    <div class="d-flex">
+                       <div class=" align-content  flex-grow-1">
+                        <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                        <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                        <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+                    
+                        <div class="container align-self-end flex-shrink-1 ">
+                            <!-- Button container -->
+                            <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                              <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                              <button type="button" class="btn " 
+                              style="background-color: #5cb85c;color:#fff ;">Approve</button>
+                            </div>
+                          </div>
+                          <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page3')">
+    
+                        </div>
+                       
+                    </div>
+                </div><div class="col-md-4">
+                    <div class="request-card1 vacation-card "  >
+                        <div class="d-flex align-items-center">
+                        <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                        <div class="align-content">
+                        <h5 class="empName" style="margin: 0;" >Moe Attar</h5></div>
+                    </div>
+                    <div class="d-flex">
+                       <div class=" align-content  flex-grow-1">
+                        <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                        <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                        <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+                    
+                        <div class="container align-self-end flex-shrink-1 ">
+                            <!-- Button container -->
+                            <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                              <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                              <button type="button" class="btn " 
+                              style="background-color: #5cb85c;color:#fff ;">Approve</button>
+                            </div>
+                          </div>
+                          <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page3')">
+    
+                        </div>
+                       
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+            <!--222-->
+            <div class="row">
+                
+                <div class="col-md-4">
+                    <div class="request-card1 vacation-card" >
+                        <div class="d-flex align-items-center">
+                        <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                        <div class="align-content">
+                        <h5 style="margin: 0;" class="empName">Nada Attar</h5></div>
+                    </div>
+                    <div class="d-flex">
+                       <div class=" align-content  flex-grow-1">
+                        <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                        <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                        <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+                    
+                        <div class="container align-self-end flex-shrink-1 ">
+                            <!-- Button container -->
+                            <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                              <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                              <button type="button" class="btn "style="background-color: #5cb85c;color:#fff ;" >Approve</button>
+                            </div>
+                          </div>
+                          <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page3')">
+    
+                        
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="request-card1 vacation-card" >
+                        <div class="d-flex align-items-center">
+                        <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                        <div class="align-content">
+                        <h5 style="margin: 0;" class="empName">Nada Attar</h5></div>
+                    </div>
+                    <div class="d-flex">
+                       <div class=" align-content  flex-grow-1">
+                        <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                        <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                        <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+                    
+                        <div class="container align-self-end flex-shrink-1 ">
+                            <!-- Button container -->
+                            <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                              <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                              <button type="button" class="btn "style="background-color: #5cb85c;color:#fff ;" >Approve</button>
+                            </div>
+                          </div>
+                          <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page3')">
+    
+                        
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="request-card1 vacation-card" >
+                        <div class="d-flex align-items-center">
+                        <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                        <div class="align-content">
+                        <h5 style="margin: 0;" class="empName">Nada Attar</h5></div>
+                    </div>
+                    <div class="d-flex">
+                       <div class=" align-content  flex-grow-1">
+                        <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                        <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                        <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+                    
+                        <div class="container align-self-end flex-shrink-1 ">
+                            <!-- Button container -->
+                            <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                              <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                              <button type="button" class="btn "style="background-color: #5cb85c;color:#fff ;" >Approve</button>
+                            </div>
+                          </div>
+                          <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page3')">
+    
+                        
+                        </div>
+                       
+                    </div>
+                </div>
+               
+               
+                
+            </div>
+            <!--333-->
+            <div class="row">
+                
+                <div class="col-md-4">
+                    <div class="request-card1 vacation-card" >
+                        <div class="d-flex align-items-center">
+                        <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                        <div class="align-content">
+                        <h5 style="margin: 0;" class="empName">Nour Attar</h5></div>
+                    </div>
+                    <div class="d-flex">
+                       <div class=" align-content  flex-grow-1">
+                        <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                        <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                        <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+                    
+                        <div class="container align-self-end flex-shrink-1 ">
+                            <!-- Button container -->
+                            <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                              <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                              <button type="button" class="btn " style="background-color: #5cb85c;color:#fff ;">Approve</button>
+                            </div>
+                          </div>
+                        
+                          <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page3')">
+                        </div>
+                       
+                    </div>
+                </div> 
+                <div class="col-md-4">
+                    <div class="request-card1 vacation-card" >
+                        <div class="d-flex align-items-center">
+                        <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                        <div class="align-content">
+                        <h5 style="margin: 0;" class="empName">Nour Attar</h5></div>
+                    </div>
+                    <div class="d-flex">
+                       <div class=" align-content  flex-grow-1">
+                        <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                        <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                        <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+                    
+                        <div class="container align-self-end flex-shrink-1 ">
+                            <!-- Button container -->
+                            <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                              <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                              <button type="button" class="btn " style="background-color: #5cb85c;color:#fff ;">Approve</button>
+                            </div>
+                          </div>
+                        
+                          <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page3')">
+                        </div>
+                       
+                    </div>
+                </div> 
+                <div class="col-md-4">
+                    <div class="request-card1 vacation-card" >
+                        <div class="d-flex align-items-center">
+                        <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                        <div class="align-content">
+                        <h5 style="margin: 0;" class="empName">Nour Attar</h5></div>
+                    </div>
+                    <div class="d-flex">
+                       <div class=" align-content  flex-grow-1">
+                        <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                        <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                        <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+                    
+                        <div class="container align-self-end flex-shrink-1 ">
+                            <!-- Button container -->
+                            <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                              <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                              <button type="button" class="btn " style="background-color: #5cb85c;color:#fff ;">Approve</button>
+                            </div>
+                          </div>
+                        
+                          <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page3')">
+                        </div>
+                       
+                    </div>
+                </div> 
+               
+                
+                
+                
+            </div>
+            <!--444-->
+            <div class="row">
+                
+              <div class="col-md-4">
+                    <div class="request-card1 vacation-card" >
+                        <div class="d-flex align-items-center">
+                        <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                        <div class="align-content">
+                        <h5 style="margin: 0;" class="empName">Ahmad Attar</h5></div>
+                    </div>
+                    <div class="d-flex">
+                       <div class=" align-content  flex-grow-1">
+                        <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                        <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                        <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+                    
+                        <div class="container align-self-end flex-shrink-1 ">
+                            <!-- Button container -->
+                            <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                              <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                              <button type="button" class="btn "style="background-color: #5cb85c;color:#fff ;" >Approve</button>
+                            </div>
+                          </div>
+                          <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page3')">
+    
+                        
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="request-card1 vacation-card" >
+                        <div class="d-flex align-items-center">
+                        <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                        <div class="align-content">
+                        <h5 style="margin: 0;" class="empName">Ahmad Attar</h5></div>
+                    </div>
+                    <div class="d-flex">
+                       <div class=" align-content  flex-grow-1">
+                        <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                        <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                        <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+                    
+                        <div class="container align-self-end flex-shrink-1 ">
+                            <!-- Button container -->
+                            <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                              <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                              <button type="button" class="btn "style="background-color: #5cb85c;color:#fff ;" >Approve</button>
+                            </div>
+                          </div>
+                          <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page3')">
+    
+                        
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="request-card1 vacation-card" >
+                        <div class="d-flex align-items-center">
+                        <img src="https://img.icons8.com/color/48/user.png" alt="Profile" class="rounded-circle">
+                        <div class="align-content">
+                        <h5 style="margin: 0;" class="empName">Ahmad Attar</h5></div>
+                    </div>
+                    <div class="d-flex">
+                       <div class=" align-content  flex-grow-1">
+                        <p ><span class="info">Submitted on:</span><br> 1/3/2024</p>
+                        <p><span class="info">Duration:</span><br> 2 Weeks (1/4/2023-14/4/2023)</p>
+                        <p><span class="info">Salary:</span><br> 2500 AED</p></div>
+                    
+                        <div class="container align-self-end flex-shrink-1 ">
+                            <!-- Button container -->
+                            <div class="d-flex flex-md-column gap-2 flex-row-reverse" >
+                              <button type="button" class="btn btn-outline-success" style="padding: 0;">Decline</button>
+                              <button type="button" class="btn "style="background-color: #5cb85c;color:#fff ;" >Approve</button>
+                            </div>
+                          </div>
+                          <input type="checkbox" class="request-checkbox d-none" onchange="updateSelectAll('page3')">
+    
+                        
+                        </div>
+                       
+                    </div>
+                </div>
+               
+                
+            </div>
+        </div>
+
+
+        <div class="d-flex justify-content-center mt-4">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#" onclick="changePage(1)">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#" onclick="changePage(2)">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#" onclick="changePage(3)">3</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+       
+        
+        
+    </div>
+    
+
+
+
+</main>
+
+    <my-footer></my-footer>
+
+
+
+    
+    <script type="module" src="shared.js"></script>
+<script  src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+
+
+</html>

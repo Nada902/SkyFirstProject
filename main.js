@@ -23,47 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 ////////////////////////////////////////////////////////////
-// Sample data to be saved in localStorage
-/*const defaultUserData = {
-    name: "Ahmad Azmi",
-    title: "Junior Accounting Officer",
-    reportingTo: "Salwa Assem",
-    corporateLevel: "Level 10",
-    vacationRequests: 10,
-    leaveRequests: 10
-};
-
-// Function to save data to localStorage
-function saveUserData() {
-    localStorage.setItem('userData', JSON.stringify(defaultUserData));
-}
-
-// Function to load data from localStorage
-function loadUserData() {
-    const savedData = localStorage.getItem('userData');
-    if (savedData) {
-        const userData = JSON.parse(savedData);
-        document.getElementById('userName').innerText = userData.name;
-        document.getElementById('profileTitle').innerText = userData.title;
-        document.getElementById('reportingTo').innerText = userData.reportingTo;
-        document.getElementById('corporateLevel').innerText = userData.corporateLevel;
-        document.getElementById('vacationRequests').innerText = userData.vacationRequests;
-        document.getElementById('leaveRequests').innerText = userData.leaveRequests;
-        document.getElementById('vacationRequestsCard').innerText = userData.vacationRequests;
-        document.getElementById('leaveRequestsCard').innerText = userData.leaveRequests;
-    } else {
-        // Save default data if none exists
-        saveUserData();
-        loadUserData(); // Load the default data after saving
-    }
-}
-
-
-
-// Load user data on page load
-window.onload = loadUserData;
-*/
-/////////////////////////////////////////////
 
 function searchRequests() {
     const input = document.getElementById('searchInput').value.toLowerCase();
@@ -73,4 +32,118 @@ function searchRequests() {
         const name = card.querySelector('.card-header').textContent.toLowerCase();
         card.style.display = name.includes(input) ? 'block' : 'none';
     });
+}
+
+////////////////////////////////////////////
+function adjustCardLayout() {
+    var card = document.getElementById("responsive-card");
+
+    if (window.innerWidth >= 768) {
+      card.classList.add("flex-row");
+      card.classList.remove("flex-column");
+    } else {
+      card.classList.add("flex-column");
+      card.classList.remove("flex-row");
+    }
+  }
+
+  window.onload = adjustCardLayout;
+  window.onresize = adjustCardLayout;
+
+////////////////////////////////////////////////
+function searchRequest() {
+    const input = document.getElementById('searchInpt').value.toLowerCase();
+    const cards = document.querySelectorAll('.vacation-card');
+
+    cards.forEach(card => {
+        const name = card.querySelector('.empName').textContent.toLowerCase();
+        card.style.display = name.includes(input) ? 'block' : 'none';
+    });
+}
+////////////////////////////////////
+
+function changePage(pageNumber) {
+    // Hide all pages
+    document.querySelectorAll('.row[id^="page"]').forEach(page => {
+        page.classList.add('d-none');
+    });
+
+    // Show the selected page
+    document.getElementById(`page${pageNumber}`).classList.remove('d-none');
+}
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    changePage(1); // Load page 1 by default
+});
+///////////////////////////////////
+/*function toggleSelectAll(selectAllCheckbox) {
+    // Get all checkboxes with class 'request-checkbox'
+    const checkboxes = document.querySelectorAll('.request-checkbox');
+    // Set all checkboxes to the state of the 'Select All' checkbox
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = selectAllCheckbox.checked;
+    });
+}*/
+/*function toggleSelectAll(selectAllCheckbox) {
+    // Get all checkboxes with class 'request-checkbox'
+    const checkboxes = document.querySelectorAll('.request-checkbox');
+    
+    // Show or hide all checkboxes based on 'Select All' checkbox state
+    checkboxes.forEach(checkbox => {
+        checkbox.classList.toggle('d-none', !selectAllCheckbox.checked);
+        checkbox.checked = selectAllCheckbox.checked;
+    });
+}
+*/
+
+
+/*
+function toggleSelectAll(selectAllCheckbox) {
+    // Get all checkboxes with class 'request-checkbox'
+    const checkboxes = document.querySelectorAll('.request-checkbox');
+    
+    // Show or hide all checkboxes based on 'Select All' checkbox state
+    checkboxes.forEach(checkbox => {
+        checkbox.classList.toggle('d-none', !selectAllCheckbox.checked);
+        checkbox.checked = selectAllCheckbox.checked;
+    });
+}
+
+function updateSelectAll() {
+    // Get the 'Select All' checkbox
+    const selectAllCheckbox = document.getElementById('selectAll');
+    
+    // Get all checkboxes with class 'request-checkbox'
+    const checkboxes = document.querySelectorAll('.request-checkbox');
+    
+    // Check if all checkboxes are checked
+    const allChecked = Array.from(checkboxes).every(checkbox => checkbox.checked);
+    
+    // If all checkboxes are checked, check 'Select All' checkbox; otherwise, uncheck it
+    selectAllCheckbox.checked = allChecked;
+}*/
+function toggleSelectAll(pageId, selectAllCheckbox) {
+    // Get all checkboxes within the specified page
+    const checkboxes = document.querySelectorAll(`#${pageId} .request-checkbox`);
+    
+    // Show all checkboxes and set them based on 'Select All' checkbox state
+    checkboxes.forEach(checkbox => {
+        checkbox.classList.remove('d-none');
+        checkbox.checked = selectAllCheckbox.checked;
+    });
+}
+
+function updateSelectAll(pageId) {
+    // Get the 'Select All' checkbox for the page
+    const selectAllCheckbox = document.getElementById(`selectAll${pageId.charAt(0).toUpperCase() + pageId.slice(1)}`);
+    
+    // Get all checkboxes within the specified page
+    const checkboxes = document.querySelectorAll(`#${pageId} .request-checkbox`);
+    
+    // Check if all checkboxes are checked
+    const allChecked = Array.from(checkboxes).every(checkbox => checkbox.checked);
+    
+    // If all checkboxes are checked, check 'Select All' checkbox; otherwise, uncheck it
+    selectAllCheckbox.checked = allChecked;
 }

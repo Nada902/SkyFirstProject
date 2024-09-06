@@ -3,12 +3,13 @@
     padding: 0;
     margin: 0;
 }
-header nav{
-    background-color: #28a745;
-}
+
 footer{
     text-align: center;
-    border-color: #28a745;
+    border-color: #5cb85c;
+}
+.navbar-toggler{
+    color: #e0e0e0;
 }
 .welcome-container {
     padding: 20px;
@@ -23,14 +24,14 @@ footer{
 .profile-card {
     padding: 20px;
     border: 1px solid #e0e0e0;
-    background-color: #f9f9f9;
+    background-color:#f6f6f6;
     margin-bottom: 20px;
-    position: relative; /* Added for positioning the button */
-    box-shadow: 2px 2px 10px;
-    border-radius: 30px; 
+    position: relative; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px; 
 }
 .request-card {
-    background-color: #28a745;
+    background-color: #5cb85c;
     color: white;
     border-radius: 10px;
     padding: 20px;
@@ -51,7 +52,7 @@ footer{
 }
 .info-item i {
     margin-right: 10px;
-    color: #28a745;
+    color: #5cb85c;
 }
 .btn-view-profile {
     position: absolute; 
@@ -77,20 +78,79 @@ footer{
     background-color: rgba(0, 0, 0, 0.5);
 }
 /***********************************************/
+
 .request-card1 {
+    background-color: #ffffff;
     margin: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     padding: 15px;
     text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
 }
+.d-none {
+    display: none;
+}
+
+
 .card-header {
     font-weight: bold;
 }
 .align-content{
     text-align: left;
+    font-size: small;
+    
 }
+.info {
+    font-size: 0.9em;
+    color: #6c757d;
+}
+
 .icon-success {
-    color: #28a745;
+    color: #5cb85c;
     margin: 3px;
+}
+/********************************/
+
+.info-row1 {
+    display: flex; 
+    justify-content: space-between; 
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.info-item1 {
+    display: flex;
+    align-items: center;
+    flex: 1 1 150px; 
+    text-align: center; 
+    padding: 10px; 
+}
+.info-item1 i {
+    margin-right: 10px;
+    color: #5cb85c;
+}
+/*********************/
+.history-card {
+    border: 1px solid #e0e0e0;
+    background-color:#f6f6f6;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+.vacation-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.vacation-header {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.btn-success{
+    background-color: #5cb85c;
 }
