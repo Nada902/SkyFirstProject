@@ -63,71 +63,26 @@ function searchRequest() {
 ////////////////////////////////////
 
 function changePage(pageNumber) {
-    // Hide all pages
+    // Hide pages
     document.querySelectorAll('.row[id^="page"]').forEach(page => {
         page.classList.add('d-none');
     });
 
-    // Show the selected page
+    // Show selected page
     document.getElementById(`page${pageNumber}`).classList.remove('d-none');
 }
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    changePage(1); // Load page 1 by default
+    changePage(1); // Load page1 by default
 });
 ///////////////////////////////////
-/*function toggleSelectAll(selectAllCheckbox) {
-    // Get all checkboxes with class 'request-checkbox'
-    const checkboxes = document.querySelectorAll('.request-checkbox');
-    // Set all checkboxes to the state of the 'Select All' checkbox
-    checkboxes.forEach(checkbox => {
-        checkbox.checked = selectAllCheckbox.checked;
-    });
-}*/
-/*function toggleSelectAll(selectAllCheckbox) {
-    // Get all checkboxes with class 'request-checkbox'
-    const checkboxes = document.querySelectorAll('.request-checkbox');
-    
-    // Show or hide all checkboxes based on 'Select All' checkbox state
-    checkboxes.forEach(checkbox => {
-        checkbox.classList.toggle('d-none', !selectAllCheckbox.checked);
-        checkbox.checked = selectAllCheckbox.checked;
-    });
-}
-*/
 
-
-/*
-function toggleSelectAll(selectAllCheckbox) {
-    // Get all checkboxes with class 'request-checkbox'
-    const checkboxes = document.querySelectorAll('.request-checkbox');
-    
-    // Show or hide all checkboxes based on 'Select All' checkbox state
-    checkboxes.forEach(checkbox => {
-        checkbox.classList.toggle('d-none', !selectAllCheckbox.checked);
-        checkbox.checked = selectAllCheckbox.checked;
-    });
-}
-
-function updateSelectAll() {
-    // Get the 'Select All' checkbox
-    const selectAllCheckbox = document.getElementById('selectAll');
-    
-    // Get all checkboxes with class 'request-checkbox'
-    const checkboxes = document.querySelectorAll('.request-checkbox');
-    
-    // Check if all checkboxes are checked
-    const allChecked = Array.from(checkboxes).every(checkbox => checkbox.checked);
-    
-    // If all checkboxes are checked, check 'Select All' checkbox; otherwise, uncheck it
-    selectAllCheckbox.checked = allChecked;
-}*/
 function toggleSelectAll(pageId, selectAllCheckbox) {
-    // Get all checkboxes within the specified page
+    //Get checkboxes in specified page
     const checkboxes = document.querySelectorAll(`#${pageId} .request-checkbox`);
     
-    // Show all checkboxes and set them based on 'Select All' checkbox state
+    // Show checkboxes and set them based on 'Select All' 
     checkboxes.forEach(checkbox => {
         checkbox.classList.remove('d-none');
         checkbox.checked = selectAllCheckbox.checked;
@@ -138,12 +93,12 @@ function updateSelectAll(pageId) {
     // Get the 'Select All' checkbox for the page
     const selectAllCheckbox = document.getElementById(`selectAll${pageId.charAt(0).toUpperCase() + pageId.slice(1)}`);
     
-    // Get all checkboxes within the specified page
+    // Get all checkboxes in the specified page
     const checkboxes = document.querySelectorAll(`#${pageId} .request-checkbox`);
     
     // Check if all checkboxes are checked
     const allChecked = Array.from(checkboxes).every(checkbox => checkbox.checked);
     
-    // If all checkboxes are checked, check 'Select All' checkbox; otherwise, uncheck it
+    // If all checkboxes are checked, check 'Select All' checkbox; else, uncheck it
     selectAllCheckbox.checked = allChecked;
 }
